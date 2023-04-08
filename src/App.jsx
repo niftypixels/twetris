@@ -11,23 +11,16 @@ import {
   spinLeft,
   spinRight,
 } from './store/slices/gameSlice'
+import GridTable from './components/GridTable'
 
 function App() {
-  const game = useSelector((state) => state.game)
-  const {
-    grid,
-    level,
-  } = game;
   const dispatch = useDispatch()
-
-  console.table(grid)
+  const { level } = useSelector((state) => state.game)
 
   return (
     <div className="App">
       <h1>Level: {level}</h1>
-      <table>
-
-      </table>
+      <GridTable />
     </div>
   )
 }
