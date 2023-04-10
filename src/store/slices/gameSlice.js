@@ -3,13 +3,13 @@ import { createSlice } from '@reduxjs/toolkit'
 const GRID_COLS = 10;
 const GRID_ROWS = 24;
 const PIECES = {
-  I: '',
-  J: '',
-  L: '',
-  O: '',
-  S: '',
-  T: '',
-  Z: '',
+  I: 'i',
+  J: 'j',
+  L: 'l',
+  O: 'o',
+  S: 's',
+  T: 't',
+  Z: 'z',
 };
 
 export const gameSlice = createSlice({
@@ -55,6 +55,9 @@ export const gameSlice = createSlice({
 
     spawnPiece: (state) => {
       console.log('spawnPiece', state)
+      const keys = Object.keys(PIECES)
+      const piece = PIECES[keys[keys.length * Math.random() << 0]]
+      console.log(piece)
     },
 
     spinLeft: (state) => {
