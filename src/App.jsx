@@ -36,6 +36,7 @@ function App() {
         break;
       case 'ArrowUp':
       case 'KeyW':
+      case 'Enter':
       case 'Space':
         dispatch(dropHard());
         break;
