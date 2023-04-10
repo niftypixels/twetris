@@ -18,9 +18,7 @@ function App() {
   const dispatch = useDispatch()
   const { level } = useSelector((state) => state.game)
 
-  const onKeyDown = (event) => {
-    const { code } = event;
-
+  const onKeyDown = ({ code }) => {
     switch (code) {
       case 'ArrowDown':
       case 'KeyS':
