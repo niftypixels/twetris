@@ -9,6 +9,7 @@ import {
   moveLeft,
   moveRight,
   setLevel,
+  spawnPiece,
   spinLeft,
   spinRight,
 } from './store/slices/gameSlice'
@@ -49,6 +50,12 @@ function App() {
       case 'KeyC':
       case 'Backslash':
         dispatch(holdPiece());
+        break;
+      case 'Slash':
+        dispatch(spawnPiece());
+        break;
+      default:
+        console.log(code);
         break;
     }
   }
