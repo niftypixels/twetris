@@ -1,19 +1,17 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css'
+import GridTable from './components/GridTable'
 import {
-  clearRows,
   dropHard,
   dropSoft,
   holdPiece,
   moveLeft,
   moveRight,
-  setLevel,
   spawnPiece,
   spinLeft,
   spinRight,
 } from './store/slices/gameSlice'
-import GridTable from './components/GridTable'
 
 function App() {
   const dispatch = useDispatch()
