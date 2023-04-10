@@ -37,6 +37,10 @@ export const gameSlice = createSlice({
       console.log('dropSoft', state)
     },
 
+    holdPiece: (state) => {
+      console.log('holdPiece', state)
+    },
+
     moveLeft: (state) => {
       console.log('moveLeft', state)
     },
@@ -47,6 +51,10 @@ export const gameSlice = createSlice({
 
     setLevel: (state) => {
       console.log('setLevel', state)
+    },
+
+    spawnPiece: (state) => {
+      console.log('spawnPiece', state)
     },
 
     spinLeft: (state) => {
@@ -63,9 +71,11 @@ export const {
   clearRows,
   dropHard,
   dropSoft,
+  holdPiece,
   moveLeft,
   moveRight,
   setLevel,
+  spawnPiece,
   spinLeft,
   spinRight,
 } = gameSlice.actions
